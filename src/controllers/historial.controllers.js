@@ -9,6 +9,8 @@ const list = async (req, res) => {
     });
 }
 
+
+
 const listFilter = async (req, res) => {
     
     const historial = await historialService.listFilter(req.query.q);
