@@ -1,5 +1,5 @@
 const {sequelize} = require("./bd.service");
-const { turnosModel } = require ('../models/turnos.model');
+const { turnoModel } = require ('../models/turnos.model');
 const { QueryTypes } = require("sequelize");
 
 
@@ -52,7 +52,7 @@ turnosResult = (turnosResult && turnosResult[0]) ? turnosResult[0] : [];
 
 const getById = async (codigo) => {
     //Buscar en la base de datos por codigo
-    const turnoModelResult = await turnosModel.findByPk(codigo);
+    const turnoModelResult = await turnoModel.findByPk(codigo);
     //console.log('find codigo', codigo)
     if(turnoModelResult){
         return turnoModelResult.dataValues;
@@ -65,7 +65,7 @@ const getById = async (codigo) => {
 const create = async (data) => {
     //Guardar en la base de datos por codigo
     console.log('create data', data);
-    const turnoModelResult = await turnosModel.create (data);
+    const turnoModelResult = await turnoModel.create (data);
     return turnoModelResult.dataValues;
     // if(turnoModelResult){
     //     return turnoModelResult.dataValues;
@@ -78,7 +78,7 @@ const create = async (data) => {
 const update = async (data, id) => {
     //Actualizar en la base de datos
     console.log("update data",data);
-    const turnosModelCount = await turnosModel.update (data, {
+    const turnosModelCount = await turnoModel.update (data, {
                                                                     where : {
                                                                         turnos_id : id,
                                                                     }
@@ -86,7 +86,7 @@ const update = async (data, id) => {
     console.log("update data", turnosModelCount.dataValues);
     return data;
     // if(turnosModelCount > 0){
-    //     const turnoModelResult = await turnosModel.findByPk(data.codigo);
+    //     const turnoModelResult = await turnoModel.findByPk(data.codigo);
     //     return turnoModelResult.dataValues;
     // }else{
     //     return null;
@@ -97,7 +97,7 @@ const update = async (data, id) => {
 const remove = async (turnos_id) => {
     //Eliminar en la base de datos
     console.log(" borrar codigo",turnos_id)
-    const turnosModelCount = await turnosModel.destroy({
+    const turnosModelCount = await turnoModel.destroy({
                                                                 where : {
                                                                     turnos_id
                                                                 }

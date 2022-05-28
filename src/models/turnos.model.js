@@ -20,7 +20,7 @@ const turnoModel = sequelize.define('turnos', {
   },
   turnos_usu: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   turnos_lab: {
     type: DataTypes.INTEGER,
