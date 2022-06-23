@@ -1,33 +1,62 @@
+const { sequelize } = require("./bd.service");
 const {resultadosModel }= require('../models/resultados.model');
 const { QueryTypes } = require("sequelize");
 
+// const list = async (query, pageStar = 1, pageLimit = 10) => {
+
+//  const resultadosModelResult = await resultadosModel.findAll ();
+
+//  console.log("resultadosResult", resultadosModelResult);
+//  const resultadosArray = new Array();
+//  for (let i = 0; i < resultadosModelResult.length; i++) {
+//    const resultadosResult = resultadosModelResult[i];
+//    resultadosArray.push(resultadosResult.dataValues);
+//  }
+
+//  return resultadosArray;
+// }
+
 const list = async (query, pageStar = 1, pageLimit = 10) => {
-
- const resultadosModelResult = await resultadosModel.findAll ();
-
- console.log("resultadosResult", resultadosModelResult);
- const resultadosArray = new Array();
- for (let i = 0; i < resultadosModelResult.length; i++) {
-   const resultadosResult = resultadosModelResult[i];
-   resultadosArray.push(resultadosResult.dataValues);
- }
-
- return resultadosArray;
-}
+    let resultadoModelResult = await sequelize.query(
+      `
+      SELECT * FROM resultados as r   inner join laboratorios as l 
+                                         on l.lab_id = r.result_lab 
+      
+      `,
+      {
+        replacements: {},
+        //type: QueryTypes.SELECT
+      }
+    );
+  
+    console.log("resultadosResult", resultadoModelResult);
+  
+    resultadoModelResult =
+      resultadoModelResult && resultadoModelResult[0] ? resultadoModelResult[0] : [];
+    return resultadoModelResult;
+  };
 
 const listFilter = async (query, pageStar = 1, pageLimit = 10) => {
  let resultadosResult = await sequelize.query(
-     `SELECT * 
-                                                  FROM resultados
-                                                  WHERE UPPER ( result_analisis ) LIKE :q
-                                                  OR UPPER (result_res ) LIKE :q
-                                                  OR UPPER (result_diagnostico) LIKE :q
-                                                  ORDER BY result_analisis`,
+    //  `SELECT * 
+    //                                               FROM resultados
+    //                                               WHERE UPPER ( result_analisis ) LIKE :q
+    //                                               OR UPPER (result_res ) LIKE :q
+    //                                               OR UPPER (result_diagnostico) LIKE :q
+    //                                               ORDER BY result_analisis`
+    `
+    SELECT * FROM resultados as r   inner join laboratorios as l 
+                                         on l.lab_id = r.result_lab
+									   WHERE concat(UPPER(l.lab_nombre),'',UPPER(r.result_res),'',UPPER(r.result_analisis)::text)
+								  LIKE  :q 
+    
+    `                                              
+                                                  ,
 {
     replacements: {
-        q: query ? "%" + query.toUpperCase() + "%" : "%",
-},
-    type: QueryTypes.SELECT,
+        q: `%${query.toUpperCase()}%`,
+      },
+ //type: QueryTypes.SELECT,
 }
 );
  

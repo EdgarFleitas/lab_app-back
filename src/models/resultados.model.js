@@ -1,7 +1,9 @@
 const { DataTypes } = require('sequelize');
-const {sequelize} = require ("../service/bd.service");
+const { sequelize } = require ("../service/bd.service");
+
 const resultadosModel = sequelize.define('resultados', {
   // Model attributes are defined 
+  
   result_id: {
     type: DataTypes.INTEGER,
     allowNull: false,

@@ -1,17 +1,17 @@
-const resultadoController = require('../controllers/resultados.controllers');
+const resultadosController = require('../controllers/resultados.controllers');
  
 module.exports = (app) =>{
 
-    app.get('/resultados', resultadoController.list);
+    app.get('/resultados', resultadosController.list);
 
-    app.get('/resultados-filter', resultadoController.listFilter);
+    app.get('/resultados-filter/:q', resultadosController.listFilter);
     
-    app.get('/resultado/find/:id', resultadoController.getById );
+    app.get('/resultado/find/:id', resultadosController.getById );
     
-    app.post('/resultado/create', resultadoController.create);
+    app.post('/resultado/create', resultadosController.create);
     
-    app.put('/resultado/update', resultadoController.update);
+    app.put('/resultado/update', resultadosController.update);
 
-    app.delete('/resultado/remove/:id', resultadoController.remove)
+    app.delete('/resultado/remove/:id', resultadosController.remove)
 
 }
