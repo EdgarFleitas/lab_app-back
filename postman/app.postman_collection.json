@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "dd817a66-94c9-47a5-9a3d-2bc505dada71",
+		"name": "app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/roles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3Vfbm9tYnJlIjoiRG9yYSIsInVzdV9jb2RpZ28iOjEsImlhdCI6MTY1MzU4MTA3OX0.UzZ5tABRD6Z9vhH13xX8kuVbis2aJnSbOp6gTS9ppiE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador100\",\r\n            \"rol_usu\": 2\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador11\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador12\",\r\n            \"rol_usu\": 3\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador13\",\r\n            \"rol_usu\": 4\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador14\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador15\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador16\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador17\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador18\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/rolusus/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"rol_fecha\": \"2022-06-24\",\r\n            \"rol_descripcion\": \"administrador19\",\r\n            \"rol_usu\": 2\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/rolusus/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rolusus",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
